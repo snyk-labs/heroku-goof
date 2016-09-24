@@ -1,0 +1,24 @@
+{
+  "name": "goof-heroku",
+  "description": "Sample vulnerable app",
+  "scripts": {
+  },
+  "env": {
+    "MONGOLAB_URI": {
+      "required": true
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1
+    }
+  },
+  "addons": [
+    "mongolab"
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ]
+}
